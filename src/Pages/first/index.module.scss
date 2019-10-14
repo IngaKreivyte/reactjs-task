@@ -1,0 +1,53 @@
+.dropdown{
+    display: inline-block;
+    width: 200px;
+    background-color:white;
+    }
+    input{
+        user-select: none;
+    }
+    .active{
+        display: inline-block;
+        width: 200px;
+        background-color:white;
+         
+    }
+        .selected{
+            display: inline-block;
+            width: 200px;
+            padding: 10px;
+            margin: 0;
+            position: relative;
+            background-color:white;
+             
+        }
+    
+        .options {
+            border: 1px solid black;
+            display: none;
+            width: 200px;
+            text-align:center;
+            color:black;
+            background-color:white;
+            max-height: 200px;
+            overflow-y: auto;
+        }    
+            .options * {
+                border-bottom: 1px solid black;
+                cursor: pointer;
+            }
+            .options *:hover {
+                background-color:lightblue;
+            }
+            .active  .options {
+                display: inline-block;
+            }
+            .active  .selected{
+                border: 2px solid black;
+            }
+            .active  .selected  .selector {
+                background-color: lightblue;
+            }
+        
+    
+    
