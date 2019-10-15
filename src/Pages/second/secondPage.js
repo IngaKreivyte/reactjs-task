@@ -30,18 +30,18 @@ class secondPage extends Component {
                         return word.indexOf(this.state.inputValue)>=0;
                     })
                     .filter(word => !this.state.tagselection.includes(word))
-                    .map((word, i) => <div  onClick={()=>{ this.setState({ tagselection:[...this.state.tagselection, word]})}} key = {i}> {word} </div>)    
+                    .map((word, i) => <div  onClick={()=>{ this.setState({ inputValue:[],tagselection:[...this.state.tagselection, word]})}} key = {i}> {word} </div>)    
                         return (
                             <div onClick={this.toggleDropdown} className={style.container}>
                             <h3>The “select” component allows user to select multiple options</h3>
                             <div  onSubmit={this.onFormSubmit} className= {this.state.dropdownExpanded ? style.active:style.dropdown} >
                                 {this.state.tagselection.length>0 &&  this.state.tagselection.map((word,i)=>
-                                    <div className={style.tagselection} key={i} >{word} 
-                                        <span className={style.delete} 
-                                            onClick={()=>{this.setState({tagselection:[...this.state.tagselection.filter(l=>l!==this.state.tagselection[i])] })}}> 
-                                            x
-                                        </span>
-                                    </div>)}
+                                    <div className={style.tagselection} key={i} >
+                                    <span className={style.delete} 
+                                    onClick={()=>{this.setState({tagselection:[...this.state.tagselection.filter(l=>l!==this.state.tagselection[i])] })}}> 
+                                    x
+                                    </span>
+                                    {word}</div>)}
                                 <input onChange={this.onInputChange}
                                     name='inputValue'
                                     autoComplete="off" 
@@ -49,11 +49,11 @@ class secondPage extends Component {
                                     onClick={()=>{this.toggleDropdown()}}  
                                     className={style.selected}
                                     type='text'
-                                    placeholder='Select..'/>
+                                    placeholder=''/>
                                     <div className={style.arrow}>  </div>
                                 {words.length  ? <div className={style.options}>
                                     {words}
-                                </div> : <div> no results found :(</div>
+                                </div> : <div> Unfortunately, no results found </div>
                                 }
                             </div>
                         </div>

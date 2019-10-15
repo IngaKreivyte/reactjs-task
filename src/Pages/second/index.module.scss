@@ -5,14 +5,35 @@
 .dropdown{
     display: inline-block;
     width: 300px;
+    line-height: 30px;
+    height: auto;
     position: relative;
     margin: 50px calc((100% - 300px ) / 2);
-    
+    border:1px solid gray;
+    border-radius: 5px;
+    *{
+        margin-left: 5px !important;
+    }
+    input{
+        background: none transparent;
+        border: 0 none !important;
+        width: 25px !important;
+        border:none;
+        cursor: default;
+        display: inline-block;
+        margin: 0 0 0 2px !important;
+        padding:0;
+        outline: none;
+        line-height:  30px !important;
+        
+        }
     .arrow {
         width: 0; 
         height: 0; 
+        padding: 0 !important;
+        margin: 0 !important;
         position: absolute;
-        top: 15px;
+        top: 12px;
         right: 15px;
         color: grey;
         border-left: 7px solid transparent;
@@ -25,8 +46,35 @@
     .active{
         display: inline-block;
         width: 300px;
+        line-height: 30px;
+        height: auto;
         position: relative;
         margin: 50px calc((100% - 300px ) / 2);
+        border:1px solid gray;
+        border-radius: 5px;
+        *{
+            margin-left: 5px !important;
+        }
+        input{
+            background: none transparent;
+            border: 0 none !important;
+            width: 25px !important;
+            border:none;
+            cursor: default;
+            display: inline-block;
+            margin: 0 0 0 2px !important;
+            padding:0;
+            outline: none;
+            line-height:  30px !important;
+            display: inline-block; 
+            overflow: hidden; 
+            animation: typing 5s steps(30, end), blink .75s step-nd infinite; 
+            white-space: nowrap;
+            border-right: 10px solid black; 
+            box-sizing: border-box;
+            }
+  
+            
         .arrow{
             width: 0; 
             height: 0; 
@@ -37,6 +85,7 @@
             border-left: 7px solid transparent;
             border-right: 7px solid transparent;
             border-bottom: 7px solid grey;
+            margin: 0 !important;
         }
     }
     h3{
@@ -45,33 +94,39 @@
         margin: 0 calc((100% - 600px ) / 2); 
         text-align: center;
     }
-    input{
-        user-select: none;
-    }
+    
     .tagselection{
         display: inline-block;
-        border-radius: 5px;
-        border: 1px solid black;
-        color: black;
-       float: left;
-        z-index: 2;
-        padding:5px;
+        border-radius: 2px;
+        border: 1px solid #007eff;
+        float: left;
+        padding:2px;
+        margin: 5px 0 5px 5px !important;
         width: auto;
-        background-color: white;
+        height: auto;
+        line-height: 20px;
+        color: #007eff;
+        background-color: rgba(0,126,255,.08);
+        border: 1px solid #007eff;
+        ;
         
     }
     .delete{
-        width: 7px;
-        color: grey;
+        width: 15px;
+        float: left;
+        margin: 0 5px !important;
+        padding: 0 !important;
+        color: #007eff;
         cursor: pointer;
-        font-weight: bolder;
+        border-right: 1px solid #007eff;
+        
     }
     
     .selected{
         display: inline-block;
         width: 300px;
-        padding: 10px;
-        margin: 0;
+        padding:0;
+        margin: 0 !important;
         position: relative;
         border-radius: 5px;
         border: 1px solid gray;
@@ -87,12 +142,13 @@
         width: 300px;
         text-align:left;
         max-height: 300px;
+        margin: 0 !important;
         overflow-y: auto;
         border-radius: 5px;
     }    
             .options * {
                 cursor: pointer;
-                padding-left: 8px;
+                padding-left:2px;
             }
             .options *:hover {
                 background-color:rgb(223, 237, 251);
