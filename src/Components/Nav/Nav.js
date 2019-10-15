@@ -6,9 +6,10 @@ class Nav extends Component {
     render() {
         return (
             <nav>
-                <NavLink className={style.link}  to='/'> Home </NavLink>
-                <NavLink className={style.link}  to='/firstpage'> firstpage </NavLink>
-                <NavLink className={style.link}  to='/firstpage'> Secondpage </NavLink>
+                <NavLink activeClassName={style.active} to='/firstpage'> First page </NavLink>
+                <NavLink activeClassName={style.active} to='/secondpage'> Second page </NavLink>
+                
+                <NavLink activeClassName={style.active} to='/examplepage'> example page </NavLink>
             </nav>
         );
     }

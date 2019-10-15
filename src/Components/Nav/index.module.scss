@@ -1,0 +1,17 @@
+nav{
+    display: inline-block;
+    width: 80%;
+    height: auto;
+    margin: 50px 10%;
+    *{
+        display: inline-block;
+        color: black;
+        float: left;
+        margin-left: 20px;
+        text-decoration: none;
+    }
+    .active{
+        border-bottom: 1px solid grey;
+    }
+    
+}

@@ -48,11 +48,20 @@
     input{
         user-select: none;
     }
+    .tagselection{
+        display: inline-block;
+        border-radius: 5px;
+        border: 1px solid black;
+        color: black;
+       float: left;
+        z-index: 2;
+        padding:5px;
+        width: auto;
+        background-color: white;
+        
+    }
     .delete{
         width: 7px;
-        position: absolute;
-        top: 7px;
-        right: 40px;
         color: grey;
         cursor: pointer;
         font-weight: bolder;
