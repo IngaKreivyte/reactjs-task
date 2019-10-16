@@ -24,6 +24,8 @@ class secondPage extends Component {
         }
         
         render() {
+             var width = 5 ;
+            if(this.state.inputValue.length>0)  width = + 3 * this.state.inputValue.length +'%';
             console.log(this.state.tagselection);
                 let  words= this.state.words
                     .filter(word=>{
@@ -34,27 +36,33 @@ class secondPage extends Component {
                         return (
                             <div onClick={this.toggleDropdown} className={style.container}>
                             <h3>The “select” component allows user to select multiple options</h3>
-                            <div  onSubmit={this.onFormSubmit} className= {this.state.dropdownExpanded ? style.active:style.dropdown} >
-                                {this.state.tagselection.length>0 &&  this.state.tagselection.map((word,i)=>
-                                    <div className={style.tagselection} key={i} >
-                                    <span className={style.delete} 
-                                    onClick={()=>{this.setState({tagselection:[...this.state.tagselection.filter(l=>l!==this.state.tagselection[i])] })}}> 
-                                    x
-                                    </span>
-                                    {word}</div>)}
-                                <input onChange={this.onInputChange}
-                                    name='inputValue'
-                                    autoComplete="off" 
-                                    value={this.state.inputValue}
-                                    onClick={()=>{this.toggleDropdown()}}  
-                                    className={style.selected}
-                                    type='text'
-                                    placeholder=''/>
-                                    <div className={style.arrow}>  </div>
-                                {words.length  ? <div className={style.options}>
-                                    {words}
-                                </div> : <div> Unfortunately, no results found </div>
-                                }
+                            <div  onSubmit={this.onFormSubmit} className= {this.state.dropdownExpanded ? [style.dropdown, style.active,  ].join(' '):style.dropdown} >
+
+                                {/* className={[style.link, style.btn,  ].join(' ')} */}
+                                <div className={style.block}>
+                                    {this.state.tagselection.length>0 &&  this.state.tagselection.map((word,i)=>
+                                        <div className={style.tagselection} key={i} >
+                                            <span className={style.delete} 
+                                            onClick={()=>{this.setState({tagselection:[...this.state.tagselection.filter(l=>l!==this.state.tagselection[i])] })}}> 
+                                            x
+                                            </span>
+                                            {word}
+                                        </div>)
+                                    }
+                                        <input onChange={this.onInputChange}
+                                            name='inputValue'
+                                            autoComplete="off" 
+                                            style={{width}}
+                                            value={this.state.inputValue}
+                                            onClick={()=>{this.toggleDropdown()}}  
+                                            type='text'
+                                            placeholder=''
+                                        />
+                                </div>
+                                    {words.length  ? <div className={style.options}>
+                                        {words}
+                                    </div> : <div> Unfortunately, no results found </div>
+                                    }
                             </div>
                         </div>
                     )

@@ -8,8 +8,6 @@ class Nav extends Component {
             <nav>
                 <NavLink activeClassName={style.active} to='/firstpage'> First page </NavLink>
                 <NavLink activeClassName={style.active} to='/secondpage'> Second page </NavLink>
-                
-                <NavLink activeClassName={style.active} to='/examplepage'> example page </NavLink>
             </nav>
         );
     }

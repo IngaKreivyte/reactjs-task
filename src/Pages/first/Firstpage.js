@@ -31,7 +31,7 @@ class Firstpage extends Component {
                     return (
                 <div onClick={this.toggleDropdown} className={style.container}>
                 <h3>The  “select” component allows user to select only one value</h3>
-                <div  onSubmit={this.onFormSubmit} className= {this.state.dropdownExpanded ? style.active:style.dropdown} >
+                <div  onSubmit={this.onFormSubmit} className= {this.state.dropdownExpanded ? [style.dropdown, style.active,  ].join(' '):style.dropdown} >
                     <input onChange={this.onInputChange}
                         name='inputValue'
                         autoComplete="off" 

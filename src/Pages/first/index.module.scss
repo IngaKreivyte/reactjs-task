@@ -2,32 +2,18 @@
     display: inline-block;
     width: 100%;
     height: 100vh;
-.dropdown{
-    display: inline-block;
-    width: 300px;
-    position: relative;
-    margin: 50px calc((100% - 300px ) / 2);
-    
-    .arrow {
-        width: 0; 
-        height: 0; 
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        color: grey;
-        border-left: 7px solid transparent;
-        border-right: 7px solid transparent;
-        border-bottom: 7px solid grey;
-        transform: rotate(180deg);
-      }
+    h3{
+        display: inline-block;
+        width: 600px;
+        margin: 0 calc((100% - 600px ) / 2); 
+        text-align: center;
     }
-    
-    .active{
+    .dropdown{
         display: inline-block;
         width: 300px;
         position: relative;
         margin: 50px calc((100% - 300px ) / 2);
-        .arrow{
+        .arrow {
             width: 0; 
             height: 0; 
             position: absolute;
@@ -37,64 +23,57 @@
             border-left: 7px solid transparent;
             border-right: 7px solid transparent;
             border-bottom: 7px solid grey;
+            transform: rotate(180deg);
         }
-    }
-    h3{
-        display: inline-block;
-        width: 600px;
-        margin: 0 calc((100% - 600px ) / 2); 
-        text-align: center;
-    }
-    input{
-        user-select: none;
-    }
-    .delete{
-        width: 7px;
-        position: absolute;
-        top: 7px;
-        right: 40px;
-        color: grey;
-        cursor: pointer;
-        font-weight: bolder;
-    }
-    
-    .selected{
-        display: inline-block;
-        width: 300px;
-        padding: 10px;
-        margin: 0;
-        position: relative;
-        border-radius: 5px;
-        border: 1px solid gray;
-        user-select: none;
-        &:focus{
-            outline: none;
+        .delete{
+            width: 7px;
+            position: absolute;
+            top: 7px;
+            right: 40px;
+            color: grey;
+            cursor: pointer;
+            font-weight: bolder;
         }
-    }
-    
-    .options {
-        border: 1px solid gray;
-        display: none;
-        width: 300px;
-        text-align:left;
-        max-height: 300px;
-        overflow-y: auto;
-        border-radius: 5px;
-    }    
-            .options * {
+        
+        .selected{
+            display: inline-block;
+            width: 300px;
+            padding: 10px;
+            margin: 0;
+            position: relative;
+            border-radius: 5px;
+            border: 1px solid gray;
+            user-select: none;
+            &:focus{
+                outline: none;
+            }
+        }
+        .options {
+            border: 1px solid gray;
+            display: none;
+            width: 300px;
+            text-align:left;
+            max-height: 300px;
+            overflow-y: auto;
+            border-radius: 5px;
+            * {
                 cursor: pointer;
                 padding-left: 8px;
             }
-            .options *:hover {
+            *:hover {
                 background-color:rgb(223, 237, 251);
             }
-            .active  .options {
-                display: inline-block;
-            }
-            .active  .selected{
-                border: 2px solid gray;
-            }
-            
-        
-    
+        }    
+    }
+    .active{
+        .arrow{
+            transform: rotate(0);
+        }
+        .options {
+            display: inline-block;
+        }
+         .selected{
+            border: 2px solid gray;
+        }
+    } 
 }
