@@ -12,7 +12,7 @@
         display: inline-block;
         width: 300px;
         line-height: 30px;
-        min-height: 30px;
+        min-height: 40px;
         height: auto;
         position: relative;
         margin: 50px calc((100% - 300px ) / 2);
@@ -24,15 +24,22 @@
         }
         .block{
             display: inline-block;
-            width: 100%;
+            width: 80%;
             height: auto;
+            float: left;
             position: relative;
             margin: 0 !important;
-            padding: 0;
+            padding: 5px;
             *{
                 display: inline-block;
                 float: left;
+                max-width: 100% !important;
+                margin: auto;
+                padding: auto;
             }
+            
+
+            
             .tagselection{
                 display: inline-block;
                 border-radius: 2px;
@@ -55,6 +62,7 @@
                     cursor: pointer;
                     border-right: 1px solid #007eff;
                 }
+                
             }
         }
         .options {
@@ -73,18 +81,41 @@
                 cursor: pointer;
                 padding-left:2px;
             }
-        }  
+        } 
+            .arrow {
+                width: 0; 
+                height: 0; 
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                color: grey;
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+                border-bottom: 7px solid grey;
+                transform: rotate(180deg);
+            }
     } 
     .active{
         .options {
             display: inline-block;
         }  
+        .arrow{
+            transform: rotate(0);
+        } 
     } 
-    
-        
-    
-          
-                
-                
-                  
+    input{
+        height: auto !important;
+        line-height: 20px !important;
+        user-select: none !important;
+        min-height: 35px !important;
+        font-size: 15px !important;
+        border: none;
+        &:focus{
+            outline: none;
+        }
+    }   
+    .error{
+        width: 100%;
+    }
+             
 }

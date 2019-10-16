@@ -41,7 +41,7 @@ class Firstpage extends Component {
                         type='text'
                         placeholder='Select..' />
                     {this.state.inputValue.length>2 ? <div onClick={()=>{ this.setState({inputValue:''})}} className={style.delete}> x</div>:''}
-                    <div className={style.arrow}>  </div>
+                    <div className={style.arrow}/>
                     {
                      words.length  ? <div className={style.options}>
                         {words}
