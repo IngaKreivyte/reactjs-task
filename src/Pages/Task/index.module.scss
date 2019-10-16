@@ -1,0 +1,14 @@
+.container{
+    width: 100%;
+    display: inline-block;
+    h2,h3{
+        text-align: center;
+        margin: 10px 0 20px 0;
+    }
+    li{
+        width: 800px;
+        margin: 10px calc((100% - 800px ) / 2 );
+    }
+    
+
+}
