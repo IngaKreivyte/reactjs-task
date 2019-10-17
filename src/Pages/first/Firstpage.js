@@ -16,10 +16,9 @@ class Firstpage extends Component {
         this.setState({inputValue:e.target.value})
         this.setState({dropdownExpanded:true})
     }
-        onFormSubmit =(e)=>{
-            e.preventDefault();
-        }
-
+    onFormSubmit =(e)=>{
+        e.preventDefault();
+    }
 
     render() {
     let  words= this.state.words
@@ -27,28 +26,28 @@ class Firstpage extends Component {
                         return word.indexOf(this.state.inputValue)>=0;
                     })
                     .map((word, i) => <div  onClick={()=>{ this.setState({inputValue:word})}} key = {i} > {word} </div>)
-        console.log(words);
-                    return (
+                        return (
                 <div onClick={this.toggleDropdown} className={style.container}>
-                <h3>The  “select” component allows user to select only one value</h3>
-                <div  onSubmit={this.onFormSubmit} className= {this.state.dropdownExpanded ? [style.dropdown, style.active,  ].join(' '):style.dropdown} >
+                    <h3>The  “select” component allows user to select only one value</h3>
+                    <div  onSubmit={this.onFormSubmit} className= {this.state.dropdownExpanded ? [style.dropdown, style.active,  ].join(' '):style.dropdown} >
                         <textarea
-                        onChange={this.onInputChange}
-                        name='inputValue'
-                        autoComplete="off" 
-                        value={this.state.inputValue}
-                        onClick={()=>{this.toggleDropdown()}}  
-                        className={style.selected}
-                        type='text'
-                        placeholder='Select..'/>
-                    {this.state.inputValue.length>2 ? <div onClick={()=>{ this.setState({inputValue:''})}} className={style.delete}> x</div>:''}
-                    <div className={style.arrow}/>
-                    {
-                     words.length  ? <div className={style.options}>
-                        {words}
-                    </div> : <div> no results found :(</div>
-                    }
-                </div>
+                            onChange={this.onInputChange}
+                            name='inputValue'
+                            autoComplete="off" 
+                            value={this.state.inputValue}
+                            onClick={()=>{this.toggleDropdown()}}  
+                            className={style.selected}
+                            type='text'
+                            placeholder='Select..'
+                        />
+                        {this.state.inputValue.length>2 ? <div onClick={()=>{ this.setState({inputValue:''})}} className={style.delete}>x</div>:''}
+                        <div className={style.arrow}/>
+                        {
+                        words.length  ? <div className={style.options}>
+                            {words}
+                        </div> : <div className={style.error}> Unfortunately, no results found</div>
+                        }
+                    </div>
             </div>
         )
     }
