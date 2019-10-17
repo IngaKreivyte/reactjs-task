@@ -13,11 +13,11 @@ class App extends Component {
     return (
       <div>
         <BrowserRouter>
-        <Nav/>
+          <Nav/>
           <Switch>
-          <Route path='/'  exact component={Task}/>
-           <Route path='/firstpage' component={Firstpage}/>
-           <Route path='/secondpage' component={SecondPage}/>
+            <Route path='/'  exact component={Task}/>
+            <Route path='/firstpage' component={Firstpage}/>
+            <Route path='/secondpage' component={SecondPage}/>
           </Switch>
          </BrowserRouter>
       </div>
