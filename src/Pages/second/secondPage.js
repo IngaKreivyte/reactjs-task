@@ -25,7 +25,7 @@ class secondPage extends Component {
         
     render() {
         var width = 50 ;
-        if(this.state.inputValue.length>0)  width = 5 + 3*this.state.inputValue.length +'%';
+        if(this.state.inputValue.length>0)  width = 20 + 3*this.state.inputValue.length +'%';
             let  words= this.state.words
                 .filter(word=>{
                     return word.indexOf(this.state.inputValue)>=0;
