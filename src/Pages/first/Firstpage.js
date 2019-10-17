@@ -7,12 +7,12 @@ class Firstpage extends Component {
         inputValue:'',
         words:['bulb','bee','tea','copper','division','bit','bits','person','knot','laborer','thrill','aunt','island','mother','cheese','spring','sleep','tiger','wheel','machine','powder','leg','letters','talk','picture','bite','pocket','mine','level','food','party','umbrella','plot','road','brick','club','basket','butter','books','test','watch','sea','fang','smoke','hate', 'system', 'stem', 'society', 'driving']
       }
-      toggleDropdown = () => {
+    toggleDropdown = () => {
         this.setState({
          dropdownExpanded:!this.state.dropdownExpanded,
         })
-      }
-      onInputChange=(e)=>{
+    }
+    onInputChange=(e)=>{
         this.setState({inputValue:e.target.value})
         this.setState({dropdownExpanded:true})
     }
