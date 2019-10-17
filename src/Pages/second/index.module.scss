@@ -30,6 +30,7 @@
             position: relative;
             margin: 0 !important;
             padding: 5px;
+            word-break: break-all;
             *{
                 display: inline-block;
                 float: left;
@@ -109,6 +110,7 @@
         user-select: none !important;
         min-height: 35px !important;
         font-size: 15px !important;
+        word-break: break-all;
         border: none;
         &:focus{
             outline: none;

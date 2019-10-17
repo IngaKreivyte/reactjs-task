@@ -24,8 +24,8 @@ class secondPage extends Component {
         }
         
         render() {
-             var width = 20 ;
-            if(this.state.inputValue.length>0)  width = 20+ 2*this.state.inputValue.length +'%';
+             var width = 50 ;
+            if(this.state.inputValue.length>0)  width = 5 + 3*this.state.inputValue.length +'%';
             console.log(this.state.tagselection);
                 let  words= this.state.words
                     .filter(word=>{
@@ -54,7 +54,7 @@ class secondPage extends Component {
                                             value={this.state.inputValue}
                                             onClick={()=>{this.toggleDropdown()}}  
                                             type='text'
-                                            placeholder=''
+                                            placeholder='select...'
                                         />  
                                 </div>
                                 <div className={style.rightBlock}>

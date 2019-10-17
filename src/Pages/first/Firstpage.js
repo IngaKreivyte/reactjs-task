@@ -32,14 +32,15 @@ class Firstpage extends Component {
                 <div onClick={this.toggleDropdown} className={style.container}>
                 <h3>The  “select” component allows user to select only one value</h3>
                 <div  onSubmit={this.onFormSubmit} className= {this.state.dropdownExpanded ? [style.dropdown, style.active,  ].join(' '):style.dropdown} >
-                    <input onChange={this.onInputChange}
+                        <textarea
+                        onChange={this.onInputChange}
                         name='inputValue'
                         autoComplete="off" 
                         value={this.state.inputValue}
                         onClick={()=>{this.toggleDropdown()}}  
                         className={style.selected}
                         type='text'
-                        placeholder='Select..' />
+                        placeholder='Select..'/>
                     {this.state.inputValue.length>2 ? <div onClick={()=>{ this.setState({inputValue:''})}} className={style.delete}> x</div>:''}
                     <div className={style.arrow}/>
                     {

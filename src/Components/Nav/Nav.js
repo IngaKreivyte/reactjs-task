@@ -6,7 +6,7 @@ class Nav extends Component {
     render() {
         return (
             <nav>
-                <NavLink activeClassName={style.active} to='/'>  Task </NavLink>
+                <NavLink activeClassName={style.active} exact to='/'> Task </NavLink>
                 <NavLink activeClassName={style.active} to='/firstpage'> First page </NavLink>
                 <NavLink activeClassName={style.active} to='/secondpage'> Second page </NavLink>
             </nav>

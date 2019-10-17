@@ -16,8 +16,8 @@ class App extends Component {
         <Nav/>
           <Switch>
           <Route path='/'  exact component={Task}/>
-           <Route path='/firstpage'  component={Firstpage}/>
-           <Route path='/secondpage'  component={SecondPage}/>
+           <Route path='/firstpage' component={Firstpage}/>
+           <Route path='/secondpage' component={SecondPage}/>
           </Switch>
          </BrowserRouter>
       </div>

@@ -11,6 +11,7 @@
     .dropdown{
         display: inline-block;
         width: 300px;
+        height: auto !important;
         position: relative;
         margin: 50px calc((100% - 300px ) / 2);
         .arrow {
@@ -38,12 +39,19 @@
         .selected{
             display: inline-block;
             width: 300px;
-            padding: 10px;
+            padding:10px 60px 10px 10px;
             margin: 0;
             position: relative;
             border-radius: 5px;
             border: 1px solid gray;
             user-select: none;
+            overflow: hidden;
+            resize: none;
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+            box-sizing: border-box;
+            height:35px !important;
+            max-height: 80px !important; 
             &:focus{
                 outline: none;
             }
